@@ -1,0 +1,97 @@
+.autocomplete-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .autocomplete-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: turquoise;
+    z-index: 1;
+  }
+  
+  .autocomplete-input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 163, 255, 0.3);
+    padding: 1rem 1rem 1rem 3.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .autocomplete-input:focus {
+    border-color: turquoise;
+    outline: none;
+    box-shadow: 0 0 1rem rgba(0, 163, 255, 0.3);
+  }
+  
+  .autocomplete-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .suggestions-dropdown {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(0, 163, 255, 0.3);
+    border-radius: 0.5rem;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .suggestions-dropdown::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .suggestions-dropdown::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .suggestions-dropdown::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, turquoise, #00a3ff);
+    border-radius: 10px;
+  }
+  
+  .suggestion-item {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 163, 255, 0.2);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .suggestion-item:last-child {
+    border-bottom: none;
+  }
+  
+  .suggestion-item:hover {
+    background: linear-gradient(90deg, rgba(0, 163, 255, 0.2), transparent);
+    padding-left: 2rem;
+  }
+  
+  .suggestion-item i {
+    color: turquoise;
+    font-size: 1.4rem;
+  }

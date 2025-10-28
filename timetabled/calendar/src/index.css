@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 
 * {
   margin: 0;
@@ -8,18 +9,32 @@
   font-family: 'Comfortaa', sans-serif;
 }
 
-html{
-  font-size:62.5%;
+html {
+  font-size: 62.5%;
 }
-.container {
+
+body {
   width: 100%;
   min-height: 100vh;
-  background-color: #000000;
+  background: linear-gradient(135deg, #0a192f 0%, #1e3a5f 50%, #2c5282 100%);
+  background-attachment: fixed;
   display: flex;
-  flex-direction: column;    /* stack children vertically */
-  align-items: center;       /* center horizontally */
-  overflow-y: auto;          /* allow scrolling if needed */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow-x: hidden;
-  perspective: 100rem;
-  padding-top: 20px;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

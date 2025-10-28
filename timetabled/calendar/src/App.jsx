@@ -1,23 +1,13 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
 
-import Calendar from './components/Calendar';
-import './index.css';
-import EventForm from './components/EventForm';
 
-const App = () => {
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Index />} />
+    </Routes>
+  </BrowserRouter>
+);
 
-  return (
-    <div className="App">
-      <h2></h2>
-      <div className="calendar-section">
-      <Calendar />
-      </div>
-      <div className="map-section">
-      <EventForm />
-      </div>
-      <div id='map-container'>
-      </div>
-    </div>
-  )
-}
-
-export default App
+export default App;
